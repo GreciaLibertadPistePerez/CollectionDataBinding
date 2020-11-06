@@ -5,8 +5,30 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CollectionDataBindin"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Data Binding a una colección" Height="200" Width="300">
     <Grid>
-        
+        <DockPanel Margin="15">
+            <Border DockPanel.Dock="Right" BorderBrush="LightBlue" BorderThickness="3" Margin="4,0,0,0">
+                <StackPanel Margin="4" HorizontalAlignment="Center">
+                    <Button Name="addUserButton" Content="Agregar usuario"
+                            Margin="4"/>
+                    <Button Name="ChangeUserButton" Content="Modificar usuario"
+                            Margin="4"/>
+                    <Button Name="DalateUserButton" Content="Eliminar usuario"
+                            Margin="4"/>
+                </StackPanel>
+            </Border>
+            <Border DockPanel.Dock="Top" Margin="0,0,0,4"
+                    BorderBrush="LightBlue" BorderThickness="2">
+            <DockPanel>
+                <Label Content="Usuario" Margin="3" />
+                <TextBlock Name="UserTextbox" Margin="3" 
+                          VerticalAlignment="Center"/>
+            </DockPanel>
+            </Border>
+            <ListBox Name="UserListBox" DisplayMemberPath="Name"
+                 SelectionMode="Single"/>
+
+        </DockPanel>
     </Grid>
 </Window>
